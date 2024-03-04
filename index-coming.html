@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog - Coming Soon</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #f0f0f0;  
+            padding: 60px 0;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 0;
+        }
+
+        /* Responsive Styles (Using Media Queries) */
+        @media (max-width: 768px) {
+            /* Adapt styles for smaller screens if needed */
+        }
+
+        /* ... styles for side menu ... */
+        nav {
+            display: none; /* Hide the navigation initially */
+            position: fixed; /* Keep it fixed in the viewport */
+            top: 0;
+            left: 0;
+            width: 250px; /* Adjust width as needed */
+            height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .menu-button {
+            /* Style your button as needed */
+        }
+
+        .menu-open nav {
+            display: block; /* Show the navigation when the menu is open */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Awesome Affiliate Site</h1>
+        <button class="menu-button">Menu</button> 
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container"> 
+            <h1>Get Ready, Something Awesome is Coming!</h1>
+            <p>Our blog is under construction, but we'll launch soon.  Subscribe to be notified.</p>
+            <form id="subscribe-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>A Bit About Us</h2>
+            <p>Short description about your blog's focus, mission, or what people can expect.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Blog Name</p>
+    </footer>
+
+    <script>
+        // ... JavaScript for side menu ...
+        const menuButton = document.querySelector('.menu-button');
+        const nav = document.querySelector('nav');
+
+        menuButton.addEventListener('click', () => {
+            document.body.classList.toggle('menu-open');
+        });
+
+        // ... JavaScript for email form (if needed) ...
+        const subscribeForm = document.getElementById('subscribe-form');
+
+        subscribeForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            // You would handle form submission and send the email data to your server here
+        });
+    </script>
+</body>
+</html>
